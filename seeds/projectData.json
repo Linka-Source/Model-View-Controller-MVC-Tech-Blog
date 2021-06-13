@@ -1,0 +1,17 @@
+[
+    {
+      "title": "This is the first blog post",
+      "content": "This post was seeded",
+      "user_id": 1
+    },
+    {
+      "title": "This is a second blog post",
+      "content": "The second post is a fun fact. Did you know Firefox is not a fox? The free and open-source web browser Mozilla Firefox it’s not actually a fox but a panda!.",
+      "user_id": 1
+    },
+    {
+      "title": "This is a third blog post",
+      "content": "Here comes another fun fact! Google Rents Goats! The billion-dollar company has been implementing an eco-friendly approach, and instead of using noisy mowers to clean up the grass at their headquarters, they rented out goats!.",
+      "user_id": 3
+    }
+  ]
