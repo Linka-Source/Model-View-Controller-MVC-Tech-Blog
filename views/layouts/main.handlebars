@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Passport Authentication</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                {{#if loggedIn}}<li><a href="/dashboard">Dashboard</a></li>{{/if}}
+                {{#unless loggedIn}}<li><a href="/dashboard">Login</a> / <a href="/Dashboard">Signup</a></li>{{/unless}}
+                {{#if loggedIn}}<li><a href="/logout" id="logout">Logout</a></li>{{/if}}
+            </ul>
+        </nav>
+    </header>
+    {{{body}}}
+</body>
+</html>
