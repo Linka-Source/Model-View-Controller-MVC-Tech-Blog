@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+// create user model
 class User extends Model {
     validPassword(password) {
         return bcrypt.compareSync(password, this.password);
@@ -12,6 +13,17 @@ class User extends Model {
 // Remember id, created_date, updated_date columns are created for you.
 User.init(
     {
+        // id column/primary key column
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -20,13 +32,12 @@ User.init(
                 isEmail: true,
             },
         },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
+            validate: {
+                len: [6],
+            },
         },
     },
     {
