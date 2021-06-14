@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-// Requiring our models and passport as we've configured it
+
 const router = require('express').Router();
 const { User } = require('../../models');
 
